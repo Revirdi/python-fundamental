@@ -1,14 +1,15 @@
 import requests
-# def get_data(self, api):
-#     response = requests.get(f"{api}")
-#     if response.status_code == 200:
-#         self.formatted_print(response.json())
-#     else:
-#         print(f"{response.status_code} error")
-    
-# get_data("https://reqres.in/api/users?page=1")
+import re
 
 api_url = "https://reqres.in/api/users?page=1"
-response = requests.get(api_url)
-response.json()
-print(response.json())
+response = requests.get(api_url).json()
+data = response["data"]
+
+print(data) 
+
+print([element for element in response["data"] if element["id"] == 5]) 
+
+for data in data:
+    img = re.split("[/]", data["avatar"])
+    id = data["id"]
+    print(f"User {id} = {img[-1]}")
