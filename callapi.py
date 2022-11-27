@@ -6,8 +6,10 @@ response = requests.get(api_url).json()
 data = response["data"]
 
 print(data) 
+print("######################")
 
 print([element for element in response["data"] if element["id"] == 5]) 
+print("######################")
 
 for data in data:
     img = re.split("[/]", data["avatar"])

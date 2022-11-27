@@ -59,4 +59,4 @@ print(out) # [1, 4, 9, 16]
 
 out2 = [num**2 for num in x]
 print(out2) # [1, 4, 9, 16]
-print(list(map(str,out2)))
+print(list(map(str,out2))) # ['1', '4', '9', '16']
