@@ -53,7 +53,7 @@ while clue_report != "CODE CRACKED!":
 
     guess = get_guess()
 
-    clue_report = generate_clues(guess, secret_code)
+    clue_report = generate_clues(secret_code, guess)
     for clue in clue_report:
         print(clue)
 
