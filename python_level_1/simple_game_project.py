@@ -22,7 +22,6 @@ def generate_code():
     return digits[:3]
 
 # Generate The Clues
-
 def generate_clues(code, user_guess):
 
     if user_guess==code:
@@ -41,9 +40,7 @@ def generate_clues(code, user_guess):
     else:
         return clues
 
-
 # Run Game Logic
-
 print("Welcome Code Breaker!")
 
 secret_code = generate_code()
