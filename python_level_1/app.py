@@ -9,3 +9,5 @@ discount = 0.5
 print(price * discount)
 
 is_discount = False
+
+is_discount = True
